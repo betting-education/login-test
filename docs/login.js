@@ -1,21 +1,17 @@
-const loginForm = document.getElementById("login-form");
-const loginButton = document.getElementById("login-form-submit");
-const loginErrorMsg = document.getElementById("login-error-msg");
+$(function () {
+    
+    $("#signIn").on("click", function() {
+        var username = $("#user").val();
+        var password = $("#password").val();
 
-// When the login button is clicked, the following code is executed
-loginButton.addEventListener("click", (e) => {
-    // Prevent the default submission of the form
-    e.preventDefault();
-    // Get the values input by the user in the form fields
-    const username = loginForm.username.value;
-    const password = loginForm.password.value;
+        if (username === "user@email.com" && password === "password") {
+            // If the credentials are valid, show an alert box and reload the page
+            alert("You have successfully logged in.");
+            location.reload();
+        } else {
+            // Otherwise, make the login error message show (change its oppacity)
+            $("<div id=\"login-error-msg-holder\"><p id=\"login-error-msg\">Invalid username and/or password!</p></div>").appendTo("#message");
+        }
+    });
+});
 
-    if (username === "user" && password === "web_dev") {
-        // If the credentials are valid, show an alert box and reload the page
-        alert("You have successfully logged in.");
-        location.reload();
-    } else {
-        // Otherwise, make the login error message show (change its oppacity)
-        loginErrorMsg.style.opacity = 1;
-    }
-})
