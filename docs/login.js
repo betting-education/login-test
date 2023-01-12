@@ -4,7 +4,7 @@ $(function () {
         var username = $("#user").val();
         var password = $("#password").val();
         
-        $("#message > span">.remove()
+        $("#message > span").remove()
         
         if (username === "user@email.com" && password === "password") {
             window.location.assign("done.html");
