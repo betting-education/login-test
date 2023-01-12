@@ -10,7 +10,7 @@ $(function () {
             location.reload();
         } else {
             // Otherwise, make the login error message show (change its oppacity)
-            $("<div id=\"login-error-msg-holder\"><p id=\"login-error-msg\">Invalid username and/or password!</p></div>").appendTo("#message");
+            $("<p>Invalid username and/or password!</p>").appendTo("#message");
         }
     });
 });
