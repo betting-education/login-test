@@ -1,8 +1,7 @@
 $(function () {
-    
-    $("#signIn").on("click", function() {
-        var username = $("#user").val();
-        var password = $("#password").val();
+    $("#bt-sign-in").on("click", function() {
+        var username = $("#field-user").val();
+        var password = $("#field-password").val();
         
         $("#message > span").remove()
         
@@ -15,4 +14,3 @@ $(function () {
         }
     });
 });
-
